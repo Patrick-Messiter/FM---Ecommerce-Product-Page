@@ -5,36 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | E-commerce product page</title>
+  
 </head>
 <body>
-
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+  <header>
+    <logo><img src="images/logo.svg" alt="logo image"></logo>
+    <nav>
+      <ul class="navBarLeftList">
+        <li>
+          <button>Collections</button>
+        </li>
+        <li>
+          <button>Men</button>
+        </li>
+        <li>
+          <button>Women</button>
+        </li>
+        <li>
+          <button>About</button>
+        </li>
+        <li>
+          <button>Contact</button>
+        </li>
+      </ul>
+      <ul class="navBarRightList">
+        <li>
+          <button><img src="images/icon-cart.svg" alt="cart image and button"></button>
+        </li>
+        <li>
+          <button><img src="images/image-avatar.png" alt="avatar image - portrait of a man with sunglasses"></button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="leftContainer">
+      <ul>
+        <li>
+          <button class="mainImageButton"><img src="images/image-product-1.jpg" alt="Image of a pair of shoes"></button>
+        </li>
+        <li>
+          <button><img src="images\image-product-1-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+        </li>
+        <li>
+          <button><img src="images\image-product-2-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+        </li>
+        <li>
+          <button><img src="images\image-product-3-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+        </li>
+        <li>
+          <button><img src="images\image-product-4-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+        </li>
+      </ul>
+    </div>
+    <div class="rightContainer">
+      <h3>Sneaker Company</h3>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p>
+        These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they<span>&#39;</span>ll withstand everything the weather can offer.
+      </p>
+      <h2>$125.00</h2>
+      <h3>50%</h3>
+      <h4>$250.00</h4>
+      <div class="priceContainer">
+        <div class="priceContainerNumber">
+          <button><img src="images/icon-minus.svg" alt="minus symbol for selection of amount of shoes"></button>
+          <p>0</p>
+          <button><img src="images/icon-plus.svg" alt="plus symbol for selection of amount of shoes"></button>
+        </div>
+        <button><img src="images/icon-cart.svg" alt="icon image of a shopping cart">Add to cart</button>
+      </div>
+    </div>
+    <div class="lightBoxGallery">
+      <ul>
+        <li>
+          <button class="closeLightBoxButton"><img src="images/icon-close.svg" alt="close button image"></button>
+          <button class="previousButton"><img src="images/icon-previous.svg" alt="previous button image"></button>
+          <img src= "images/image-product-1.jpg" class="lightBoxGalleryMain" alt="Image of the shoe product">
+          <button class="nextButton"><img src="images/icon-next.svg" alt="next button image"></button>
+        </li>
+        <li>
+          <button><img src="images\image-product-1-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+        </li>
+        <li>
+          <button><img src="images\image-product-2-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+        </li>
+        <li>
+          <button><img src="images\image-product-3-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+        </li>
+        <li>
+          <button><img src="images\image-product-4-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+        </li>
+      </ul>
+    </div>
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
