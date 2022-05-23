@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <script src="main.js" defer></script>
 
   <title>Frontend Mentor | E-commerce product page</title>
@@ -13,7 +14,9 @@
 </head>
 <body>
   <header>
-    <logo><img src="images/logo.svg" alt="logo image"></logo>
+    <div class="logoContainer">
+      <img class="logoImage" src="images/logo.svg" alt="logo image">
+    </div>
     <nav>
       <ul class="navBarLeftList">
         <li>
@@ -37,30 +40,32 @@
           <button><img src="images/icon-cart.svg" alt="cart image and button"></button>
         </li>
         <li>
-          <button><img src="images/image-avatar.png" alt="avatar image - portrait of a man with sunglasses"></button>
+          <button><img class="avatarImage" src="images/image-avatar.png" alt="avatar image - portrait of a man with sunglasses"></button>
         </li>
       </ul>
     </nav>
   </header>
   <main>
-    <div class="leftContainer">
-      <ul>
-        <li>
-          <button class="mainImageButton"><img src="images/image-product-1.jpg" alt="Image of a pair of shoes"></button>
-        </li>
-        <li>
-          <button><img src="images\image-product-1-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-        </li>
-        <li>
-          <button><img src="images\image-product-2-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-        </li>
-        <li>
-          <button><img src="images\image-product-3-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-        </li>
-        <li>
-          <button><img src="images\image-product-4-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-        </li>
-      </ul>
+    <div class="leftContainerOuter">
+      <div class="leftContainerInner">
+        <div class="mainImageContainer">
+          <button class="mainImageButton"><img class="mainImage" src="images/image-product-1.jpg" alt="Image of a pair of shoes"></button>
+        </div>
+        <ul class = leftContainerList>
+          <li>
+            <button id="listOne" class="active"><img src="images/image-product-1-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+          </li>
+          <li>
+            <button id="listTwo"><img src="images/image-product-2-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+          </li>
+          <li>
+            <button id="listThree"><img src="images/image-product-3-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+          </li>
+          <li>
+            <button id="listFour"><img src="images/image-product-4-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="rightContainer">
       <h3>Sneaker Company</h3>
@@ -80,6 +85,8 @@
         <button><img src="images/icon-cart.svg" alt="icon image of a shopping cart">Add to cart</button>
       </div>
     </div>
+  </main>
+  <section>
     <div class="lightBoxGallery">
       <ul>
         <li>
@@ -102,7 +109,7 @@
         </li>
       </ul>
     </div>
-  </main>
+  </section>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
