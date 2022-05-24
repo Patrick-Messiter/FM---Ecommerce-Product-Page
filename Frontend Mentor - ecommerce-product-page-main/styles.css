@@ -92,6 +92,8 @@ main {
     height: max-content;
 }
 
+/* MAIN LEFT SECTION */
+
 .leftContainerOuter {
     grid-column: 1 / 1;
     display: flex;
@@ -118,26 +120,10 @@ main {
     justify-content: center;
 }
 
-.mainImageButton {
+.mainImage {
     max-height: 23rem;
     max-width: 23rem;
-    border: none;
-    background-color: white;
-    padding: 0;
-}
-
-.mainImage {
-    max-height: 100%;
-    max-width: 100%;
     border-radius: 1rem;
-}
-
-.leftContainerInner li {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
 }
 
 .leftContainerList {
@@ -149,34 +135,109 @@ main {
     max-width: 25rem;
 }
 
-.leftContainerList li {
-    width: fit-content;
-    height: fit-content;
+.leftContainerList label {
+    display: flex;
+    justify-content: center;
+}
+
+.leftContainerList [type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.leftContainerList [type=radio] + img {
+    cursor: pointer;
 }
 
 .leftContainerList img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 70%;
+    max-height: 70%;
     display: flex;
     border-radius: 0.4rem;
 }
 
-.leftContainerList button {
-    max-width: 70%;
-    max-height: 70%;
+
+.leftContainerList [type=radio]:checked + img {
+    border: 2px solid hsl(26, 100%, 55%);
+    opacity: 0.5;
+}
+
+/*MAIN RIGHT SECTION */
+
+.rightOuterContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    border-radius: 0.5rem;
+}
+
+.rightInnerContainer {
+    height: 70%;
+    width: 70%;
+}
+
+.rightInnerContainer h1 {
+    font-size: 2.5rem;
+}
+
+.rightInnerContainer p {
+    color:hsl(219, 9%, 45%);
+    line-height: 1.5rem;
+}
+
+.priceValuesContainer {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.rightInnerContainer h2 {
+    font-size: 1.5rem;
+    display: inline;
+    margin: 0;
+}
+
+.rightInnerContainer h3 {
+    color: hsl(26, 100%, 55%);
+    font-size: 0.9rem;
+}
+
+#rightH3 {
+    background-color: hsl(25, 100%, 94%);
+    width: fit-content;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    margin: 0;
+}
+
+.rightInnerContainer h4 {
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+
+.priceContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+}
+
+.priceContainerNumber {
+    grid-column: 1 / 1;
+    display: flex;
+    background-color: hsl(223, 64%, 98%);
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+.priceContainerNumber button {
     border: none;
+    background-color: hsl(223, 64%, 98%);
 }
 
-.leftContainerList .active {
-    border: 2px solid hsl(26, 100%, 55%);
-    opacity: 0.5;
 
-}
 
 
 /* LIGHT BOX SECTION */

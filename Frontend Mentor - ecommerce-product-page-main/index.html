@@ -49,40 +49,48 @@
     <div class="leftContainerOuter">
       <div class="leftContainerInner">
         <div class="mainImageContainer">
-          <button class="mainImageButton"><img class="mainImage" src="images/image-product-1.jpg" alt="Image of a pair of shoes"></button>
+          <img class="mainImage" src="images/image-product-1.jpg" alt="Image of a pair of shoes">
         </div>
-        <ul class = leftContainerList>
-          <li>
-            <button id="listOne" class="active"><img src="images/image-product-1-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-          </li>
-          <li>
-            <button id="listTwo"><img src="images/image-product-2-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-          </li>
-          <li>
-            <button id="listThree"><img src="images/image-product-3-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-          </li>
-          <li>
-            <button id="listFour"><img src="images/image-product-4-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-          </li>
-        </ul>
+        <form class = leftContainerList>
+          <label for="listOne">
+            <input type="radio" id="listOne" name="shoe" value="listOne" checked>
+            <img src="images/image-product-1-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
+          </label>
+          <label for="listTwo">
+            <input type="radio" id="listTwo" name="shoe" value="listTwo">
+            <img src="images/image-product-2-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
+          </label>
+          <label for="listThree">
+            <input type="radio" id="listThree" name="shoe" value="listThree">
+            <img src="images/image-product-3-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
+          </label>
+          <label>
+            <input type="radio" id="listFour" name="shoe" value="listFour"> 
+            <img src="images/image-product-4-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
+          </label>
+        </form>
       </div>
     </div>
-    <div class="rightContainer">
-      <h3>Sneaker Company</h3>
-      <h1>Fall Limited Edition Sneakers</h1>
-      <p>
-        These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they<span>&#39;</span>ll withstand everything the weather can offer.
-      </p>
-      <h2>$125.00</h2>
-      <h3>50%</h3>
-      <h4>$250.00</h4>
-      <div class="priceContainer">
-        <div class="priceContainerNumber">
-          <button><img src="images/icon-minus.svg" alt="minus symbol for selection of amount of shoes"></button>
-          <p>0</p>
-          <button><img src="images/icon-plus.svg" alt="plus symbol for selection of amount of shoes"></button>
+    <div class="rightOuterContainer">
+      <div class="rightInnerContainer">
+        <h3>SNEAKER COMPANY</h3>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they<span>&#39;</span>ll withstand everything the weather can offer.
+        </p>
+        <div class="priceValuesContainer">
+          <h2>$125.00</h2>
+          <h3 id="rightH3">50%</h3> 
+        </div> 
+        <h4>$250.00</h4>
+        <div class="priceContainer">
+          <div class="priceContainerNumber">
+            <button><img src="images/icon-minus.svg" alt="minus symbol for selection of amount of shoes"></button>
+            <p>0</p>
+            <button><img src="images/icon-plus.svg" alt="plus symbol for selection of amount of shoes"></button>
+          </div>
+          <button><img src="images/icon-cart.svg" alt="icon image of a shopping cart">Add to cart</button>
         </div>
-        <button><img src="images/icon-cart.svg" alt="icon image of a shopping cart">Add to cart</button>
       </div>
     </div>
   </main>
