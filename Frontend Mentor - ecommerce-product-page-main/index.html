@@ -85,37 +85,43 @@
         <h4>$250.00</h4>
         <div class="priceContainer">
           <div class="priceContainerNumber">
-            <button><img src="images/icon-minus.svg" alt="minus symbol for selection of amount of shoes"></button>
-            <p>0</p>
-            <button><img src="images/icon-plus.svg" alt="plus symbol for selection of amount of shoes"></button>
+            <button id="minusShoe"><img src="images/icon-minus.svg" alt="minus symbol for selection of amount of shoes"></button>
+            <p><span class="shoeTally">0</span></p>
+            <button id="addShoe"><img src="images/icon-plus.svg" alt="plus symbol for selection of amount of shoes"></button>
           </div>
-          <button><img src="images/icon-cart.svg" alt="icon image of a shopping cart">Add to cart</button>
+          <button class="addToCartButton"><img src="images/icon-cart.svg" alt="icon image of a shopping cart">Add to cart</button>
         </div>
       </div>
     </div>
   </main>
   <section>
     <div class="lightBoxGallery">
-      <ul>
-        <li>
+      <div class="leftContainerInner">
+        <div class="mainImageContainer">
           <button class="closeLightBoxButton"><img src="images/icon-close.svg" alt="close button image"></button>
           <button class="previousButton"><img src="images/icon-previous.svg" alt="previous button image"></button>
-          <img src= "images/image-product-1.jpg" class="lightBoxGalleryMain" alt="Image of the shoe product">
+          <img class="mainImage" src="images/image-product-1.jpg" alt="Image of a pair of shoes">
           <button class="nextButton"><img src="images/icon-next.svg" alt="next button image"></button>
-        </li>
-        <li>
-          <button><img src="images\image-product-1-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-        </li>
-        <li>
-          <button><img src="images\image-product-2-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-        </li>
-        <li>
-          <button><img src="images\image-product-3-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-        </li>
-        <li>
-          <button><img src="images\image-product-4-thumbnail.jpg" alt="differing thumbnails of same pair of shoes"></button>
-        </li>
-      </ul>
+        </div>
+        <form class = leftContainerList>
+          <label for="listOne">
+            <input type="radio" id="listOne" name="shoe" value="listOne" checked>
+            <img src="images/image-product-1-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
+          </label>
+          <label for="listTwo">
+            <input type="radio" id="listTwo" name="shoe" value="listTwo">
+            <img src="images/image-product-2-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
+          </label>
+          <label for="listThree">
+            <input type="radio" id="listThree" name="shoe" value="listThree">
+            <img src="images/image-product-3-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
+          </label>
+          <label>
+            <input type="radio" id="listFour" name="shoe" value="listFour"> 
+            <img src="images/image-product-4-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
+          </label>
+        </form>
+      </div>
     </div>
   </section>
   

@@ -32,3 +32,49 @@ listTwo.addEventListener('click', mainImageSelector);
 listThree.addEventListener('click', mainImageSelector);
 listFour.addEventListener('click', mainImageSelector);
 
+
+/*LIGHT BOX SECTION */
+
+let lightBoxContainer = document.querySelector('.lightBoxGallery');
+let lightBoxClose = document.querySelector('.closeLightBoxButton');
+
+
+function openLightBox () {
+    lightBoxContainer.style.display = 'flex';
+}
+
+mainImage.addEventListener('click', openLightBox);
+
+function closeLightBox () {
+    lightBoxContainer.style.display = 'none';
+}
+
+lightBoxClose.addEventListener('click', closeLightBox);
+
+
+
+
+
+/* SHOE VALUE SECTION */
+
+let shoeTally = document.querySelector('.shoeTally');
+let shoeMinus = document.querySelector('#minusShoe');
+let shoeAdd = document.querySelector('#addShoe');
+
+let shoeValue = 0;
+
+function addShoe () {
+    shoeValue += 1;
+    shoeTally.innerHTML = `${shoeValue}`;
+}
+
+function minusShoe() {
+    if (shoeValue > 0) {
+        shoeValue -= 1;
+        shoeTally.innerHTML = `${shoeValue}`;
+    }
+}
+
+shoeMinus.addEventListener('click', minusShoe);
+shoeAdd.addEventListener('click', addShoe);
+
