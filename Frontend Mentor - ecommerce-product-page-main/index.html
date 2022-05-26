@@ -36,8 +36,24 @@
         </li>
       </ul>
       <ul class="navBarRightList">
-        <li>
-          <button><img src="images/icon-cart.svg" alt="cart image and button"></button>
+        <li id="cartButton">
+          <button><img src="images/icon-cart.svg" alt="cart image and button"><span id="cartValueNumber">0</span></button>
+          <div class = "cartContainer">
+            <p>Cart</p>
+            <div class="cartContainerEmpty">
+              <p>Your cart is empty.</p>
+            </div>
+            <div class="cartContainerContents">
+              <div>
+                <img src="images/image-product-1-thumbnail.jpg" alt="shoe thumbnail">
+                <p>Fall Limited Edition Sneakers</p>
+                <br>
+                <p>$125.00 x</p><span class = "itemTally"></span> <span class="totalCost"></span>
+                <img src="images/icon-delete.svg" alt="Delete item / rubbish bin">
+              </div>
+              <button class="checkoutButton">Checkout</button>
+            </div>
+          </div>
         </li>
         <li>
           <button><img class="avatarImage" src="images/image-avatar.png" alt="avatar image - portrait of a man with sunglasses"></button>
@@ -64,7 +80,7 @@
             <input type="radio" id="listThree" name="shoe" value="listThree">
             <img src="images/image-product-3-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
           </label>
-          <label>
+          <label for="listFour">
             <input type="radio" id="listFour" name="shoe" value="listFour"> 
             <img src="images/image-product-4-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
           </label>
@@ -103,9 +119,9 @@
           <img class="mainImage" src="images/image-product-1.jpg" alt="Image of a pair of shoes">
           <button class="nextButton"><img src="images/icon-next.svg" alt="next button image"></button>
         </div>
-        <form class = leftContainerList>
+        <form class = "leftContainerList">
           <label for="listOne">
-            <input type="radio" id="listOne" name="shoe" value="listOne" checked>
+            <input type="radio" id="listOne" name="shoe" value="listOne">
             <img src="images/image-product-1-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
           </label>
           <label for="listTwo">
@@ -113,10 +129,10 @@
             <img src="images/image-product-2-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
           </label>
           <label for="listThree">
-            <input type="radio" id="listThree" name="shoe" value="listThree">
+            <input type="radio"id="listThree" name="shoe" value="listThree">
             <img src="images/image-product-3-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
           </label>
-          <label>
+          <label for="listFour">
             <input type="radio" id="listFour" name="shoe" value="listFour"> 
             <img src="images/image-product-4-thumbnail.jpg" alt="differing thumbnails of same pair of shoes">
           </label>
