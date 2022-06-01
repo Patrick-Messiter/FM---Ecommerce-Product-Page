@@ -136,17 +136,35 @@ let cartButton = document.querySelector('#cartButton');
 let cartContainer = document.querySelector('.cartContainer');
 let cartContainerContent = document.querySelector('.cartContainerContents');
 let cartContainerEmpty = document.querySelector('.cartContainerEmpty');
+let cartContainerItemTally = document.querySelector('.itemTally');
+let cartContainerItemTotalCost = document.querySelector('.itemTotalCost');
 
-
-
-function showCartContainer () {
-    cartContainer.style.display = "grid";
-    if (shoeValue == 0) {
-        cartContainerContent.style.display = "none";
-    } else {
-        cartContainerEmpty.style.display = "none";
+function toggleCartContainer () {
+    let displayValue = window.getComputedStyle(cartContainer).getPropertyValue("display");
+    if (displayValue == "none") {
+        cartContainer.style.display = "grid";
+    } else if(displayValue == "grid") {
+        cartContainer.style.display = "none";
     }
 }
 
-cartButton.addEventListener('click', showCartContainer);
+function cartItemCalculation () {
+    let totalValue = shoeValue * 125;
+    cartContainerItemTally.innerHTML = `${shoeValue} `;
+    cartContainerItemTotalCost.innerHTML = `$${totalValue}`;
+    if (shoeValue == 0) {
+        cartContainerContent.style.display = "none";
+        cartContainerEmpty.style.display = "flex";
+    } else {
+        cartContainerEmpty.style.display = "none";
+        cartContainerContent.style.display = "grid";
+    }
+}
+
+function interactCartContainer () {
+    toggleCartContainer();
+    cartItemCalculation();
+}
+
+cartButton.addEventListener('click', interactCartContainer);
 
