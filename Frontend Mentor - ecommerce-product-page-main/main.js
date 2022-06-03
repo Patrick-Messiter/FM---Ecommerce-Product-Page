@@ -168,3 +168,20 @@ function interactCartContainer () {
 
 cartButton.addEventListener('click', interactCartContainer);
 
+
+/* MOBILE ADDITIONS */
+
+let hamburgerButton = document.querySelector('.hamburgerButton');
+let navCloseButton = document.querySelector('.exitNavButton');
+let navBarLeftList = document.querySelector('.navBarLeftList');
+
+function mobileOpenNav () {
+    navBarLeftList.style.display = "flex";
+}
+
+function mobileCloseNav () {
+    navBarLeftList.style.display = "none";
+}
+
+hamburgerButton.addEventListener('click', mobileOpenNav);
+navCloseButton.addEventListener('click', mobileCloseNav);

@@ -26,6 +26,11 @@ header {
     display: flex;
 }
 
+.hamburgerButton,
+.exitNavButton {
+    display: none;
+}
+
 nav {
     display: grid;
     width: 100%;
@@ -451,7 +456,84 @@ main {
     transition: 0.1s;
 }
 
+/* MOBILE SECTION */
 
+@media only screen and (max-width: 650px) {
+    * {
+        font-size: 12px;
+    }
+    
+    .navBarLeftList {
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 60%;
+        z-index: 1;
+        flex-direction: column;
+        left: 0;
+        top: 0;
+        background-color: white;
+        padding: 0;
+        margin: 0;
+        align-items: flex-start;
+    }
+
+    .navBarLeftList li {
+        height:fit-content;
+        padding: 5%;
+    }
+
+    .navBarLeftList button {
+        color: black;
+        font-weight: bold;
+    }
+
+    .hamburgerButton {
+        display: flex;
+        margin: 0 10%;
+    }
+
+    .exitNavButton {
+        display: flex;
+        height: 100%;
+    }
+
+    main {
+        display: inline-block;
+    }
+
+    .leftContainerList {
+        display: none;
+    }
+    .leftContainerOuter {
+        padding: 0;
+        width: 100%;
+    }
+
+    .leftContainerInner {
+        display: block;
+    }
+    .mainImage {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        display: flex;
+    }
+
+    .priceContainer {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        row-gap: 10%;
+    }
+
+    .cartContainer {
+        left: -550%;
+        top: 180%;
+        width: 20rem;
+        height: 15rem;
+    }
+
+}
 
 
 
